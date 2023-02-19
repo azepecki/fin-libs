@@ -3,6 +3,7 @@ Library package to compute the weighted average
 """
 import numpy
 import pandas
+from helpers import _fetch_df
 
 
 """
@@ -21,13 +22,6 @@ def compute_weighted_average(csv_file_path, distr_col, weights_col):
         weights = df[weights_col]
         return _compute_weighted_average(distribution, weights)
 
-
-"""
-Helper function to create a pandas dataframe from a CSV file
-"""
-def _fetch_df(csv_file_path):
-        df = pandas.read_csv(csv_file_path)
-        return df
 
 """
 Helper function to calculate weighted average
