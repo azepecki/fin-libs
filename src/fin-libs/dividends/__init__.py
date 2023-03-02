@@ -11,9 +11,11 @@ Args:
 Returns:
         float: dividend rate
 """
+
+
 def calculate_dividend_rate(ticker):
-        tick = _fetch_ticker_data(ticker)
-        return tick.info['dividendRate']
+    tick = _fetch_ticker_data(ticker)
+    return tick.info['dividendRate']
 
 
 """
@@ -24,6 +26,8 @@ Args:
 Returns:
         float: dividend yield
 """
+
+
 def calculate_dividend_yield():
-        tick = _fetch_ticker_data(ticker)
-        return tick.info['dividendYield']
+    tick = _fetch_ticker_data(ticker)
+    return tick.info['dividendYield']

@@ -14,7 +14,9 @@ Args:
 Returns:
         net_income(float)
 """
+
+
 def calculate_net_income(csv_file_path, col_name):
-        df = _fetch_df(csv_file_path)
-        amounts = df[col_name]
-        return sum(amounts)
+    df = _fetch_df(csv_file_path)
+    amounts = df[col_name]
+    return sum(amounts)

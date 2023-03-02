@@ -16,15 +16,19 @@ Args:
 Returns:
         int: weighted average
 """
+
+
 def compute_weighted_average(csv_file_path, distr_col, weights_col):
-        df = _fetch_df(csv_file_path)
-        distribution = df[distr_col]
-        weights = df[weights_col]
-        return _compute_weighted_average(distribution, weights)
+    df = _fetch_df(csv_file_path)
+    distribution = df[distr_col]
+    weights = df[weights_col]
+    return _compute_weighted_average(distribution, weights)
 
 
 """
 Helper function to calculate weighted average
 """
+
+
 def _compute_weighted_average(distribution, weights):
-        return round(sum([distribution[i]*weights[i] for i in range(len(distribution))]/sum(weights), 2))
+    return round(sum([distribution[i] * weights[i] for i in range(len(distribution))] / sum(weights), 2))

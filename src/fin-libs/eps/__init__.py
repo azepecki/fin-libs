@@ -11,6 +11,8 @@ Args:
 Returns:
         float: the EPS
 """
+
+
 def calculate_eps(ticker):
-        tick = _fetch_ticker(ticker)
-        return tick.info['forwardEps']
+    tick = _fetch_ticker(ticker)
+    return tick.info['forwardEps']
