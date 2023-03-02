@@ -29,4 +29,4 @@ Helper function to calculate weighted average
 
 
 def _compute_weighted_average(distribution, weights):
-    return round(sum([distribution[i] * weights[i] for i in range(len(distribution))] / sum(weights), 2))
+    return numpy.average(distribution, weights=weights)

@@ -65,3 +65,11 @@ def test_calculate_price_to_book_value(mock_yfinance, ticker, expected):
     mock_yfinance.return_value.info = {"bookValue": expected}
     actual = fin_libs.calculate_price_to_book_value(ticker)
     assert actual == expected
+
+
+@patch("pandas.read_csv")
+@pytest.mark.parametrize("values,expected", [([1, 2, 3, 4, 5], 4.0), ([5, 7, 3, 2], 5.0)])
+def test_calculate_eps(mock_pandas, values, expected):
+    mock_pandas.return_value = {"col": values, "weights": values}
+    actual = fin_libs.compute_weighted_average("", "col", "weights")
+    assert round(actual, 0) == expected
