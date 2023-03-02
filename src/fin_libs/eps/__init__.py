@@ -1,7 +1,7 @@
 """
 Library module to compute earnings per share
 """
-from helpers import _fetch_ticker
+import yfinance as yf
 
 """
 Calculate Earnings per Share
@@ -11,6 +11,8 @@ Args:
 Returns:
         float: the EPS
 """
+
+
 def calculate_eps(ticker):
-        tick = _fetch_ticker(ticker)
-        return tick.info['forwardEps']
+    tick = yf.Ticker(ticker)
+    return tick.info['forwardEps']
