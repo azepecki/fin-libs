@@ -1,11 +1,16 @@
 [project]
-name = "fin-libs"
+name = "fin_libs"
 description = "Python library that exposes tools for financial analytics"
 readme = "README.md"
 version = "0.0.1"
 requires-python = ">=3.9"
 
-dependencies = []
+dependencies = [
+        "matplotlib",
+        "pandas",
+        "scikit-learn",
+        "yfinance",
+]
 
 [project.license]
 file = "LICENSE"
@@ -19,9 +24,14 @@ develop = [
         "flake8",
         "flake8-black",
         "flake8-pyproject",
+        "matplotlib",
+        "pandas",
         "pytest",
         "pytest-cov",
+        "scikit-learn",
+        "unittest",
         "wheel",
+        "yfinance"
 ]
 
 [tool.black]
@@ -56,4 +66,4 @@ python_version = '3.10'
 
 [tool.pytest.ini_options]
 asyncio_mode = 'strict'
-testpaths = 'src/fin-libs/tests'
+testpaths = 'src/test.py'

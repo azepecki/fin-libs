@@ -33,10 +33,10 @@ fix: format
 # TESTS #
 #########
 test: ## clean and run unit tests
-	python -m pytest -v src/fin-libs/tests
+	python -m pytest -v src/test.py
 
 coverage:  ## clean and run unit tests with coverage
-	python -m pytest -v src/fin-libs/tests --cov=src/fin-libs --cov-branch --cov-fail-under=75 --cov-report term-missing
+	python -m pytest -v src/test.py --cov=src/fin_libs --cov-branch --cov-fail-under=75 --cov-report term-missing
 
 # Alias
 tests: test
