@@ -1,7 +1,7 @@
 """
 Module to calculate stock price ratios
 """
-from helpers import _fetch_ticker
+import yfinance as yf
 
 """
 Calculate Price to Earnings Ratio (P/E)
@@ -14,7 +14,7 @@ Returns:
 
 
 def calculate_price_to_earning(ticker):
-    tick = _fetch_ticker(ticker)
+    tick = yf.Ticker(ticker)
     return tick.info['forwardPE']
 
 
@@ -29,5 +29,5 @@ Returns:
 
 
 def calculate_price_to_book_value(ticker):
-    tick = _fetch_ticker(ticker)
+    tick = yf.Ticker(ticker)
     return tick.info['bookValue']

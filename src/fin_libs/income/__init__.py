@@ -2,7 +2,6 @@
 Library module to compute net income
 """
 import pandas
-from helpers import _fetch_df
 
 """
 Calculate net income
@@ -17,6 +16,6 @@ Returns:
 
 
 def calculate_net_income(csv_file_path, col_name):
-    df = _fetch_df(csv_file_path)
+    df = pandas.read_csv(csv_file_path)
     amounts = df[col_name]
     return sum(amounts)

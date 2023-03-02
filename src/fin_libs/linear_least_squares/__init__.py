@@ -5,7 +5,6 @@ import numpy
 import pandas
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
-from helpers import _fetch_df
 
 """
 Does linear least squares regression
@@ -13,7 +12,7 @@ Does linear least squares regression
 
 
 def do_linear_least_squares_regression(csv_file_path):
-    df = _fetch_df(csv_file_path)
+    df = pandas.read_csv(csv_file_path)
     x = df.iloc[:, 0].values.reshape(-1, 1)
     y = df.iloc[:, 1].values.reshape(-1, 1)
     lr_helper = LinearRegression()

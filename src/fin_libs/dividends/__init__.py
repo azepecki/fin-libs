@@ -1,7 +1,8 @@
 """
 Library module to compute dividend information
 """
-from helpers import _fetch_ticker_data
+import yfinance as yf
+
 
 """
 Calculate dividend rate
@@ -14,7 +15,7 @@ Returns:
 
 
 def calculate_dividend_rate(ticker):
-    tick = _fetch_ticker_data(ticker)
+    tick = yf.Ticker(ticker)
     return tick.info['dividendRate']
 
 
@@ -28,6 +29,6 @@ Returns:
 """
 
 
-def calculate_dividend_yield():
-    tick = _fetch_ticker_data(ticker)
+def calculate_dividend_yield(ticker):
+    tick = yf.Ticker(ticker)
     return tick.info['dividendYield']
