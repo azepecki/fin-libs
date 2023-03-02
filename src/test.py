@@ -10,6 +10,12 @@ def test_calculate_compound_annual_growth_rate(first, last, years, expected):
     assert expected == round(actual, 3)
 
 
+@patch('builtins.print')
+def test_print_calculate_compound_annual_growth_rate(mock_print):
+        fin_libs.print_calculate_compound_annual_growth_rate(80, 100, 4)
+        assert mock_print.call_args.args == ("Compound annual growth rate: 5.74",)
+
+
 def test_calculate_compound_annual_growth_rate_error():
     with pytest.raises(Exception) as e:
         fin_libs.calculate_compound_annual_growth_rate(1, 2, 0)
@@ -73,3 +79,5 @@ def test_calculate_eps(mock_pandas, values, expected):
     mock_pandas.return_value = {"col": values, "weights": values}
     actual = fin_libs.compute_weighted_average("", "col", "weights")
     assert round(actual, 0) == expected
+
+
