@@ -6,6 +6,7 @@ include CONTRIBUTING.md
 
 include pyproject.toml
 include Makefile
+recursive-include src *.py
 
 prune .github
 exclude .gitignore
