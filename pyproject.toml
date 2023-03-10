@@ -21,6 +21,7 @@ repository = "https://github.com/azepecki/fin-libs"
 [project.optional-dependencies]
 develop = [
         "black",
+        "check-manifest",
         "flake8",
         "flake8-black",
         "flake8-pyproject",
