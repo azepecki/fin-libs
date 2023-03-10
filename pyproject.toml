@@ -29,7 +29,6 @@ develop = [
         "pytest",
         "pytest-cov",
         "scikit-learn",
-        "unittest",
         "wheel",
         "yfinance"
 ]
