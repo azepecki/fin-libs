@@ -1,25 +1,28 @@
 __version__ = '0.1.0'
 
 # flake8: noqa
-import compound_annual_growth_rate
+from .compound_annual_growth_rate import calculate_compound_annual_growth_rate, print_calculate_compound_annual_growth_rate
 
 # flake8: noqa
-import dividends
+from .dividends import calculate_dividend_rate, calculate_dividend_yield
 
 # flake8: noqa
-import eps
+from .eps import calculate_eps
 
 # flake8: noqa
-import income
+from .income import calculate_net_income
 
 # flake8: noqa
-import interest
+from .interest.compound import calculate_compound_interest
 
 # flake8: noqa
-import linear_least_squares
+from .interest.simple import calculate_simple_interest
 
 # flake8: noqa
-import price
+from .linear_least_squares import do_linear_least_squares_regression, plot_linear_least_squares_regression
 
 # flake8: noqa
-import weighted_average
+from .price import calculate_price_to_book_value
+
+# flake8: noqa
+from .weighted_average import compute_weighted_average
