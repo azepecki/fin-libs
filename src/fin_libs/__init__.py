@@ -1,7 +1,10 @@
 __version__ = '0.1.0'
 
 # flake8: noqa
-from .compound_annual_growth_rate import calculate_compound_annual_growth_rate, print_calculate_compound_annual_growth_rate
+from .compound_annual_growth_rate import (
+    calculate_compound_annual_growth_rate,
+    print_calculate_compound_annual_growth_rate,
+)
 
 # flake8: noqa
 from .dividends import calculate_dividend_rate, calculate_dividend_yield
