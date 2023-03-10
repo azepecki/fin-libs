@@ -26,7 +26,14 @@ format:  ## run autoformatting with black
 	python -m black src/ setup.py
 
 # alias
+# alias
 fix: format
+
+check:  ## check assets for packaging
+	check-manifest -v
+
+# Alias
+checks: check
 
 
 #########
