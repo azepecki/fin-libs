@@ -1,7 +1,6 @@
 import fin_libs
 import pytest
-import pandas
-from unittest.mock import Mock, patch
+from unittest.mock import patch
 
 
 @pytest.mark.parametrize("first,last,years,expected", [(71, 100, 4, 8.940), (2000, 10000, 5, 37.973)])
@@ -17,7 +16,7 @@ def test_print_calculate_compound_annual_growth_rate(mock_print):
 
 
 def test_calculate_compound_annual_growth_rate_error():
-    with pytest.raises(Exception) as e:
+    with pytest.raises(Exception):
         fin_libs.calculate_compound_annual_growth_rate(1, 2, 0)
 
 
@@ -47,7 +46,7 @@ def test_calculate_eps(mock_yfinance, ticker, expected):
 
 @patch("pandas.read_csv")
 @pytest.mark.parametrize("values,expected", [([1, 2, 3, 4, 5], 15), ([5, 7, 3, 2], 17)])
-def test_calculate_eps(mock_pandas, values, expected):
+def test_calculate_net_income(mock_pandas, values, expected):
     mock_pandas.return_value = {"col": values}
     actual = fin_libs.calculate_net_income("test", "col")
     assert actual == expected
@@ -75,7 +74,7 @@ def test_calculate_price_to_book_value(mock_yfinance, ticker, expected):
 
 @patch("pandas.read_csv")
 @pytest.mark.parametrize("values,expected", [([1, 2, 3, 4, 5], 4.0), ([5, 7, 3, 2], 5.0)])
-def test_calculate_eps(mock_pandas, values, expected):
+def test_calculate_weighted_average(mock_pandas, values, expected):
     mock_pandas.return_value = {"col": values, "weights": values}
     actual = fin_libs.compute_weighted_average("", "col", "weights")
     assert round(actual, 0) == expected

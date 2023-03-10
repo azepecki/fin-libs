@@ -5,7 +5,7 @@ import numpy
 import pandas
 
 """
-Compute weighted average 
+Compute weighted average
 
 Args:
         csv_file_path(str): file path string

@@ -1,7 +1,6 @@
 """
 Library package to compute linear least squares regression
 """
-import numpy
 import pandas
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
