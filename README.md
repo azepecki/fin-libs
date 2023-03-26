@@ -15,3 +15,11 @@ Python library that exposes tools for financial analytics. This includs function
 - linear least squares
 - earning per share
 - net income
+
+## Installation
+
+This library can be installed by running `pip install fin_libs`
+
+## Usage
+
+This library is meant to be used for financial analytics purposes. You can import specific functionality from modules in the library. 
