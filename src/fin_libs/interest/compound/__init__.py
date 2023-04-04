@@ -16,7 +16,7 @@ def calculate_compound_interest(principal, rate, time):
             rate (float): interest rate
             time (int): time
     Returns:
-            interest (float): compound interest"""
+            float: compound interest"""
     amount = principal * (pow((1 + rate / 100), time))
     interest = amount - principal
     return interest

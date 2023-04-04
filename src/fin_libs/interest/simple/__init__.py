@@ -16,6 +16,6 @@ def calculate_simple_interest(principal, rate, time):
             rate (float): interest rate
             time (int): time
     Returns:
-            interest (float): simple interest"""
+            float: simple interest"""
     interest = (principal * rate * time) / 100
     return interest
