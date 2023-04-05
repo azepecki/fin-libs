@@ -5,6 +5,7 @@ Financial analytics toolkit
 [![Build Status](https://github.com/ColumbiaOSS/example-project-python/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/azepecki/fin-libs/actions?query=workflow%3A%22Build+Status%22)
 [![codecov](https://codecov.io/gh/azepecki/fin-libs/branch/main/graph/badge.svg)](https://codecov.io/gh/azepecki/fin-libs)
 [![PyPI](https://img.shields.io/pypi/v/numpy)](https://pypi.org/project/fin-libs/)
+[![Docs](https://inch-ci.org/github/dwyl/hapi-auth-jwt2.svg?branch=master)](https://azepecki.github.io/fin-libs/)
 
 
 ## Overview
