@@ -20,8 +20,8 @@ Python library that exposes tools for financial analytics. This includs function
 
 ## Installation
 
-This library can be installed by running `pip install fin_libs`
+This library can be installed by running `pip install fin_libs`. This will pull the latest version of the library.
 
 ## Usage
 
-This library is meant to be used for financial analytics purposes. You can import specific functionality from modules in the library. 
+This library is meant to be used for financial analytics purposes. You can import specific functionality from modules in the library. Example usage of each module can be found at the documentation site linked above.
