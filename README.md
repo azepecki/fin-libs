@@ -10,7 +10,7 @@ Financial analytics toolkit
 
 ## Overview
 
-Python library that exposes tools for financial analytics. This includs functions to:
+Python library that exposes tools for financial analytics. This includes functions to:
 - calculate simple and compound interest
 - compound annual growth rate 
 - weighted average
