@@ -26,3 +26,10 @@ This library can be installed by running `pip install fin_libs`. This will pull 
 ## Usage
 
 This library is meant to be used for financial analytics purposes. You can import specific functionality from modules in the library. Example usage of each module can be found at the documentation site linked above.
+
+### Example
+
+```
+import fin_libs
+rate = fin_libs.compound_annual_growth_rate.calculate_compound_annual_growth_rate(71, 100, 4)
+```
